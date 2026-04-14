@@ -121,17 +121,17 @@
             filter: grayscale(20%) contrast(1);
         }
 
-        /* Skorygowane pozycjonowanie logo */
+        /* Skorygowane pozycjonowanie logo - mniejsze i przesunięte w dół */
         .logo-container {
-            margin-top: -13rem; /* Zmniejszono ujemny margines o ok. 20% */
-            margin-bottom: -7rem; /* Zwiększono odstęp dolny (mniej ujemny margines) o ok. 3 cm względem poprzedniej wersji */
+            margin-top: -8.5rem; /* Zmniejszono ujemny margines o ok. 35% (z -13rem) */
+            margin-bottom: -7rem; /* Pozostawiono ten sam margines dolny */
             z-index: 20;
             position: relative;
         }
 
         @media (max-width: 768px) {
             .logo-container {
-                margin-top: -6rem;
+                margin-top: -4rem;
                 margin-bottom: -4rem;
             }
         }
@@ -143,9 +143,9 @@
     <div class="smoke-overlay"></div>
     <div class="smoke-particle"></div>
 
-    <!-- Header z Logo -->
+    <!-- Header z Logo - Zmniejszone o 50% (z 40rem na 20rem) -->
     <header class="logo-container flex flex-col items-center px-4 w-full">
-        <img src="https://warm-sundae-a6c923.netlify.app/logoo.png" alt="[Logo Montownia Marek]" class="h-80 md:h-[40rem] object-contain">
+        <img src="https://warm-sundae-a6c923.netlify.app/logoo.png" alt="[Logo Montownia Marek]" class="h-40 md:h-[20rem] object-contain">
     </header>
 
     <!-- Sekcja Główna -->
@@ -207,7 +207,7 @@
                 </div>
             </div>
             <div class="md:w-2/5 h-[400px] md:h-auto profile-img-container relative group">
-                <img src="https://darling-bienenstitch-c3bb02.netlify.app/1000019024.jpg" 
+                <img src="https://darling-bienenstitch-c3bb02.netlify.app/paweł fesyk.jpg" 
                      alt="[Obraz Paweł Fesyk]" 
                      class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
