@@ -186,7 +186,8 @@
                 <i class="fa-solid fa-phone w-10 text-xl text-red-600"></i> +48 530 368 142
             </button>
 
-            <button onclick="handleAction('https://www.facebook.com/pawel.fesyk.5')" class="contact-btn">
+            <!-- Poprawiony link do Facebooka dla mobilnych -->
+            <button onclick="openFB()" class="contact-btn">
                 <i class="fa-brands fa-facebook-f w-10 text-xl text-red-600"></i> Facebook
             </button>
             
@@ -233,6 +234,28 @@
     </footer>
 
     <script>
+        // Funkcja do obsługi Facebooka (próba otwarcia aplikacji)
+        function openFB() {
+            const gearBox = document.getElementById('gear-box');
+            gearBox.classList.add('accelerating');
+            
+            const fbAppUrl = 'fb://profile/100005510626356'; // Próba otwarcia ID profilu (przykładowe)
+            const fbWebUrl = 'https://www.facebook.com/pawel.fesyk.5';
+            
+            setTimeout(() => {
+                // Prosta próba wykrycia mobilnego FB (działa na większości smartfonów)
+                const start = Date.now();
+                window.location.href = fbAppUrl;
+                
+                setTimeout(() => {
+                    if (Date.now() - start < 1500) {
+                        window.location.href = fbWebUrl;
+                    }
+                    gearBox.classList.remove('accelerating');
+                }, 1000);
+            }, 1000);
+        }
+
         function handleAction(url) {
             const gearBox = document.getElementById('gear-box');
             gearBox.classList.add('accelerating');
