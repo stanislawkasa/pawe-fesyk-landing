@@ -105,6 +105,10 @@
             transform: scale(1.05);
         }
 
+        .diamond {
+            color: #cc0000;
+        }
+
         /* Karta informacyjna */
         .info-card {
             background: linear-gradient(145deg, rgba(10,10,10,0.9) 0%, rgba(30,30,30,0.7) 100%);
@@ -120,38 +124,35 @@
         .profile-img-container:hover img {
             filter: grayscale(20%) contrast(1);
         }
-
-        /* Skorygowane pozycjonowanie logo - mniejsze i przesunięte w dół */
-        .logo-container {
-            margin-top: -8.5rem; /* Zmniejszono ujemny margines o ok. 35% (z -13rem) */
-            margin-bottom: -7rem; /* Pozostawiono ten sam margines dolny */
-            z-index: 20;
-            position: relative;
-        }
-
-        @media (max-width: 768px) {
-            .logo-container {
-                margin-top: -4rem;
-                margin-bottom: -4rem;
-            }
-        }
     </style>
 </head>
-<body class="flex flex-col items-center">
+<body class="flex flex-col items-center relative">
 
     <div class="smoke-bg"></div>
     <div class="smoke-overlay"></div>
     <div class="smoke-particle"></div>
 
-    <!-- Header z Logo - Zmniejszone o 50% (z 40rem na 20rem) -->
-    <header class="logo-container flex flex-col items-center px-4 w-full">
-        <img src="https://warm-sundae-a6c923.netlify.app/logoo.png" alt="[Logo Montownia Marek]" class="h-40 md:h-[20rem] object-contain">
+    <!-- Małe Logo - Lewy Górny Róg (Delikatny ujemny margines) -->
+    <div class="absolute -top-2 -left-2 md:-top-4 md:-left-4 z-50">
+        <img src="https://warm-sundae-a6c923.netlify.app/logoo.png" alt="[Logo Montownia Marek]" class="h-12 md:h-16 object-contain">
+    </div>
+
+    <!-- Tekstowy Header z Pierwszej Wersji -->
+    <header class="text-center mb-16 md:mb-24 px-4 mt-28 md:mt-32 w-full relative z-10">
+        <h1 class="brand-header text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent">
+            Montownia Marek
+        </h1>
+        <div class="flex items-center justify-center space-x-4 opacity-80">
+            <span class="diamond">♦</span>
+            <p class="text-gray-400 tracking-[0.3em] text-xs md:text-sm uppercase font-light">Strategie Marki Osobistej</p>
+            <span class="diamond">♦</span>
+        </div>
     </header>
 
     <!-- Sekcja Główna -->
     <main class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-20 lg:gap-32 w-full max-w-6xl px-6 mb-24 relative z-10">
         
-        <!-- ZĘBATKA -->
+        <!-- IDEALNA ZĘBATKA -->
         <div id="gear-box" class="relative flex-shrink-0">
             <div class="absolute inset-0 bg-red-600/5 blur-[100px] rounded-full"></div>
             <svg class="gear-svg w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 text-gray-200 relative z-10" viewBox="0 0 100 100">
@@ -196,7 +197,7 @@
     </main>
 
     <!-- Sekcja Dolna -->
-    <section class="w-full max-w-6xl px-6 mb-32">
+    <section class="w-full max-w-6xl px-6 mb-16 relative z-10">
         <div class="info-card flex flex-col md:flex-row rounded-2xl overflow-hidden border-t border-white/10 shadow-2xl">
             <div class="p-10 md:p-16 md:w-3/5">
                 <h2 class="brand-header text-3xl mb-8 text-white">Reżyseria Wizerunku</h2>
@@ -215,8 +216,13 @@
         </div>
     </section>
 
-    <footer class="pb-12 text-center text-gray-600 text-xs tracking-[0.4em] uppercase">
-        &copy; 2026 Montownia Marek. Inżynieria Wizerunku.
+    <!-- Stopka -->
+    <footer class="w-full relative pb-10 pt-4 px-6 md:px-12 flex items-center justify-center min-h-[100px]">
+        <div class="text-center text-gray-600 text-xs tracking-[0.4em] uppercase">
+            &copy; 2026 Montownia Marek. Inżynieria Wizerunku.
+        </div>
+        <!-- Małe Logo - Prawy Dolny Róg (Delikatny ujemny margines) -->
+        <img src="https://warm-sundae-a6c923.netlify.app/logoo.png" alt="[Logo Montownia Marek]" class="absolute -bottom-2 -right-2 md:-bottom-4 md:-right-4 h-10 md:h-14 object-contain opacity-50 hover:opacity-100 transition-opacity duration-300">
     </footer>
 
     <script>
