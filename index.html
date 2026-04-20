@@ -90,19 +90,20 @@
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: flex;
             align-items: center;
-            padding: 1.2rem 2rem;
+            padding: 0.8rem 1.5rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: 600;
             width: 100%;
             position: relative;
+            font-size: 0.85rem;
         }
 
         .contact-btn:hover {
             border-color: #cc0000;
             background: rgba(30, 0, 0, 0.8);
             box-shadow: 0 0 30px rgba(204, 0, 0, 0.4);
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
 
         .diamond {
@@ -179,30 +180,38 @@
         </div>
 
         <!-- Formy Kontaktu -->
-        <div class="flex flex-col gap-4 w-full max-w-sm md:max-w-xs lg:max-w-sm">
-            <h2 class="brand-header text-xl mb-4 text-center md:text-left text-gray-400">Połączmy się</h2>
+        <div class="flex flex-col gap-3 w-full max-w-sm md:max-w-xs lg:max-w-sm">
+            <h2 class="brand-header text-xl mb-2 text-center md:text-left text-gray-400">Połączmy się</h2>
             
             <button onclick="handleAction('tel:+48889285680')" class="contact-btn">
-                <i class="fa-solid fa-phone w-10 text-xl text-red-600"></i> +48 889 285 680
+                <i class="fa-solid fa-phone w-8 text-lg text-red-600"></i> +48 889 285 680
             </button>
 
             <button onclick="handleAction('https://montowniamarek.com.pl')" class="contact-btn">
-                <i class="fa-solid fa-globe w-10 text-xl text-red-600"></i> montowniamarek.com.pl
+                <i class="fa-solid fa-globe w-8 text-lg text-red-600"></i> montowniamarek.com.pl
             </button>
 
             <button onclick="handleAction('https://www.facebook.com/pawel.fesyk.5')" class="contact-btn">
-                <i class="fa-brands fa-facebook-f w-10 text-xl text-red-600"></i> Facebook
+                <i class="fa-brands fa-facebook-f w-8 text-lg text-red-600"></i> Facebook
+            </button>
+
+            <button onclick="handleAction('https://www.instagram.com/pawel_fesyk/')" class="contact-btn">
+                <i class="fa-brands fa-instagram w-8 text-lg text-red-600"></i> Instagram
+            </button>
+
+            <button onclick="handleAction('https://www.youtube.com/@montowniamarek-pawefesyk9452')" class="contact-btn">
+                <i class="fa-brands fa-youtube w-8 text-lg text-red-600"></i> YouTube
             </button>
             
             <button onclick="handleAction('https://www.linkedin.com/in/pawel-fesyk-45b280115/')" class="contact-btn">
-                <i class="fa-brands fa-linkedin-in w-10 text-xl text-red-600"></i> LinkedIn
+                <i class="fa-brands fa-linkedin-in w-8 text-lg text-red-600"></i> LinkedIn
             </button>
             
             <div class="flex flex-col">
                 <button onclick="handleAction('mailto:montowniamarek@gmail.com')" class="contact-btn">
-                    <i class="fa-solid fa-envelope w-10 text-xl text-red-600"></i> E-mail
+                    <i class="fa-solid fa-envelope w-8 text-lg text-red-600"></i> E-mail
                 </button>
-                <span class="text-[10px] text-gray-500 mt-1 tracking-widest text-center md:text-left uppercase font-light">montowniamarek@gmail.com</span>
+                <span class="text-[9px] text-gray-500 mt-1 tracking-widest text-center md:text-left uppercase font-light">montowniamarek@gmail.com</span>
             </div>
         </div>
     </main>
@@ -210,15 +219,22 @@
     <!-- Sekcja Dolna -->
     <section class="w-full max-w-6xl px-6 mb-16 relative z-10">
         <div class="info-card flex flex-col md:flex-row rounded-2xl overflow-hidden border-t border-white/10 shadow-2xl">
-            <div class="p-10 md:p-16 md:w-3/5">
-                <h2 class="brand-header text-3xl mb-8 text-white">Reżyseria Wizerunku</h2>
-                <div class="space-y-6 text-gray-400 leading-relaxed text-lg font-light">
-                    <p>W 2026 roku budowanie marki osobistej to nie tylko estetyka, to precyzyjna inżynieria zaufania. Jako reżyser Twojego wizerunku, łączę techniczne aspekty montażu marki z psychologią sprzedaży.</p>
-                    <p>Moja oferta to kompleksowe wsparcie dla małych firm i startupów, które chcą stać się liderami w swoich niszach. Dzięki doświadczeniu w fotografii wizerunkowej i strategii social media, dostarczam narzędzia gotowe do natychmiastowego wdrożenia.</p>
-                    <p>W Montowni Marek nie wierzymy w przypadki – każdy ruch, post i zdjęcie to przemyślany krok w Twojej karierze. Zapraszam do kontaktu, abyśmy mogli wspólnie zbudować Twój biznesowy autorytet od podstaw.</p>
+            <div class="p-10 md:p-14 md:w-3/5">
+                <h2 class="brand-header text-2xl mb-6 text-white">Współpraca 1:1</h2>
+                <div class="space-y-5 text-gray-400 leading-relaxed text-base font-light">
+                    <p class="text-white font-medium">Pomagam przedsiębiorcom poukładać chaos, połączyć kropki i zacząć realnie zarabiać na tym, co robią w social mediach i poza nimi.</p>
+                    
+                    <p>Jeśli działasz w sieci, ale nie wiesz, co publikować, nie masz strategii ani planu, czujesz opór przed kamerą i sprzedażą lub publikujesz, ale nie widzisz efektów – pracujemy razem nad Twoją komunikacją.</p>
+                    
+                    <div class="border-l-2 border-red-600 pl-4 py-1 space-y-3">
+                        <p><strong class="text-gray-200">Razem układamy:</strong> jasny i konkretny plan działania, spójną komunikację oraz strategię treści i sprzedaży dopasowaną do Ciebie.</p>
+                        <p><strong class="text-gray-200">Uczę Cię:</strong> jak przyciągać właściwych klientów, tworzyć treści zatrzymujące uwagę i zamieniać widoczność na realną sprzedaż.</p>
+                    </div>
+
+                    <p class="italic text-gray-300">Jeśli czujesz, że to moment, żeby to poukładać – zapraszam na niezobowiązującą konsultację wstępną. Napisz.</p>
                 </div>
             </div>
-            <div class="md:w-2/5 h-[400px] md:h-auto profile-img-container relative group">
+            <div class="md:w-2/5 h-[450px] md:h-auto profile-img-container relative group">
                 <img src="https://darling-bienenstitch-c3bb02.netlify.app/paweł fesyk.jpg" 
                      alt="[Obraz Paweł Fesyk]" 
                      class="w-full h-full object-cover">
